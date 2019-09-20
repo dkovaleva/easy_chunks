@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load i18n chunks_extras static %}
+
+{% block title %}
+    Main page. Easy chunks
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}" />
+{% endblock %}
+{% block extrascript %}
+    <script type="text/javascript" src="{% static "js/easy_chunks.js" %}"></script>
+{% endblock %}
+{% block content %}
+    <div class="card" style="width: 100%">
+    <img src='{% static "top_img.jpg" %}' class="card-img-top" alt="">
+    <div class="presentation_title">
+        <span>{% trans "This is easy chunks presentation"%}</span>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{% chunk 'my_title' %}</h5>
+        <p>
+            <ul>
+                <li>{% trans "Anyone can translate your site without using source code" %}</li>
+                <li>{% trans "Anyone can administrate your site easily" %}</li>
+                <li>{% trans "Languages are isolated from each other" %}</li>
+                <li>{% trans "Chunks are editable for site administration, but looks like text for users" %}</li>
+            </ul>
+        </p>
+        <p class="card-text">{% chunk 'my_description' %}</p>
+        <a href="#" class="btn btn-primary">{% chunk 'my_link' %}</a>
+    </div>
+</div>
+
+{% include 'chunk_modal.html' %}
+{% endblock %}

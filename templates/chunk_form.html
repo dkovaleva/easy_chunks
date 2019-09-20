@@ -1,0 +1,9 @@
+<form id="edit_chunk_form" url='{% url "chunks:edit_chunk" form.instance.pk %}' chunk_id="{{form.instance.pk}}">
+    {{form.media}}
+    {% csrf_token %}
+    <div class="error" style="display:none"></div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Text</label>
+        <textarea class="form-control" id="chunk_text" rows="3" name="text">{{form.text.value}}</textarea>
+    </div>
+</form>

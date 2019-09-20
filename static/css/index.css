@@ -1,0 +1,25 @@
+.presentation_title {
+    position:fixed;
+    width: 100%;
+    text-align: center;
+    top:0;
+    margin-top: 10px;
+}
+
+.presentation_title span {
+    font-size: 5em;
+    color: #103d6d;
+}
+
+
+.chunk-badge {
+    font-size: 0.7em;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+#edit_chunk_form .error {
+    color: red;
+    font-size: 11px;
+    padding: 5px;
+}
